@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*to use later for responsiveness*/
+.content-grid{
+    display: grid;
+    grid-template-columns: 10em [content-start] 1fr [content-end] 10em;
+    min-height: 80vh;
+}
+
+.content-grid > *{
+    grid-column: content;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+
+    background-color: black;
+    color: white;
+    padding-left: 3em;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav * {
+    position: relative;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+}
+
+nav *::after {
+    content: "";
+    position: absolute;
+    right: 0em; 
+    top: 25%; 
+    bottom: 25%; 
+    width: 1px; 
+    background-color: white;
+}
+
+nav *:last-child::after {
+    display: none; 
+}
+
+nav *:hover {
+    background-color: rgb(94, 94, 94);
+    color: white;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+#previous, #next{
+    color : white;
+}
